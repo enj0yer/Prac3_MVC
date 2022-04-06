@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Delete Customer";
+}
+
+@model Prac3_MVC.Models.Customer
+<div class="form">
+    @using (Html.BeginForm())
+    {
+        <div class="input_block">
+            <p class="input_label">Id Заказчика</p> @Html.TextBoxFor(model => model.Id)
+        </div>
+        <input type="submit" value="Удалить" class="submit"/>
+    }
+</div>

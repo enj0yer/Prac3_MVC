@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Заказы";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="action_menu">
+    <div>@Html.ActionLink("Просмотр всех заказов", "Check", "Order")</div>
+    <div>@Html.ActionLink("Добавление заказа", "Add", "Order")</div>
+    <div>@Html.ActionLink("Изменение заказа", "Modify", "Order")</div>
+    <div>@Html.ActionLink("Удаление заказа", "Delete", "Order")</div>
+</div>

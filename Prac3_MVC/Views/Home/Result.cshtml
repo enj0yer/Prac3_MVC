@@ -1,0 +1,11 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Result</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" />
+</head>
+<body>
+    <p>@ViewBag.Result</p>
+    <div class="button">@Html.ActionLink("Продолжить", "Index", (ViewBag.From == "Customer") ? "Customer" : (ViewBag.From == "Order") ? "Order" : "Home")</div>
+</body>
+</html>
+

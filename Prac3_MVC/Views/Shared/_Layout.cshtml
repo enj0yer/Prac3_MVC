@@ -1,0 +1,14 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body> 
+    <div class="menu">
+        <div>@Html.ActionLink("Главная", "Index", "Home")</div>
+        <div>@Html.ActionLink("Работа с заказами", "Index", "Order")</div>
+        <div>@Html.ActionLink("Работа с заказчиками", "Index", "Customer")</div>
+    </div>
+    @RenderBody()
+</body>
+</html>

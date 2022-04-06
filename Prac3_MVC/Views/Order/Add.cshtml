@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Add Order";
+}
+
+@model Prac3_MVC.Models.Order
+<div class="form">
+    @using (Html.BeginForm())
+    {
+        <div class="input_block">
+            <p class="input_label">Название товара</p> @Html.TextBoxFor(model => model.Name)
+        </div>
+
+        <div class="input_block">
+            <p class="input_label">Id Покупателя</p> @Html.TextBoxFor(model => model.CustomerId, new { @type = "number"})
+        </div>
+        <div class="input_block">
+            <p class="input_label">Цена</p> @Html.TextBoxFor(model => model.Price, new { @type = "number" })
+        </div>
+        <input type="submit" value="Добавить" class="submit" />
+    }
+</div>
