@@ -3,11 +3,12 @@
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
 </head>
-<body> 
+<body>
     <div class="menu">
         <div>@Html.ActionLink("Главная", "Index", "Home")</div>
         <div>@Html.ActionLink("Работа с заказами", "Index", "Order")</div>
         <div>@Html.ActionLink("Работа с заказчиками", "Index", "Customer")</div>
+        <div>@Html.ActionLink("Просмотр всех заказчиков и заказов", "CheckAll", "Home")</div>
     </div>
     @RenderBody()
 </body>

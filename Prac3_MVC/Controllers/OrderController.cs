@@ -58,7 +58,6 @@ namespace Prac3_MVC.Controllers
                     if (db.Customers.Find(db.Orders.Find(model.Id).CustomerId) == null)
                     {
                         db.Orders.Remove(db.Orders.Find(model.Id));
-
                     }
                     else
                     {

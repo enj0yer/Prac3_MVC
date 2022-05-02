@@ -48,6 +48,7 @@ namespace Prac3_MVC.Controllers
                 if (db.Customers.Find(model.Id) != null)
                 {
                     db.Customers.Remove(db.Customers.Find(model.Id));
+                    db.Orders.SqlQuery("Delete from Orders where CustomerId = @p0", model.Id);
                     db.SaveChanges();
                 }
                 return RedirectToAction("Index");
@@ -66,6 +67,7 @@ namespace Prac3_MVC.Controllers
                 if (db.Customers.Find(id) != null && db.Customers.Remove(db.Customers.Find(id)) != null)
                 {
                     db.Customers.Remove(db.Customers.Find(id));
+                    db.Orders.SqlQuery("Delete from Orders where CustomerId = @p0", id);
                     db.SaveChanges();
                 }
                 
